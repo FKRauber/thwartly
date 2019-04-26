@@ -1,5 +1,5 @@
-puts "OMNIAUTH IS GO"
+# puts "OMNIAUTH IS GO"
 
-Rails.application.config.middleware.use Omniauth::Builder do
-    provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], scope: "user"
-end
+# Rails.application.config.middleware.use Omniauth::Builder do
+#     provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], scope: "user"
+# end
