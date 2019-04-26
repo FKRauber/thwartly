@@ -11,7 +11,7 @@
 
   <body>
     <nav class="navbar">
-      <% if current-user %>
+      <% if current_user %>
         <%= link_to "Home", root_path %>
         <%= link_to "My Profile", user_path(current_user) %>
         <%= link_to "Today", root_path %>
