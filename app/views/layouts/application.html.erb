@@ -10,6 +10,24 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar">
+      <% if current-user %>
+        <%= link_to "Home", root_path %>
+        <%= link_to "My Profile", user_path(current_user) %>
+        <%= link_to "Today", root_path %>
+        <%= link_to "Archives", root_path %>
+        <%= link_to "Suggestion Box", root_path %>
+        <%= link_to "Contact", root_path %>
+        <%= link_to "Agreement", root_path %>
+      <% else %>
+      <%= link_to "Sign Up", new_user_path %>
+      <%= link_to "Sign In", signin_path %>
+      <%= link_to "Sign In with Github", "/auth/github" %>
+      <% end %>
+    </nav>
+    
+    <div id="app-container" class="container" role="main">
+      <%= yield %>
+    </div>
   </body>
 </html>
