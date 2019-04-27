@@ -1,9 +1,13 @@
 <h1>Sessions#new</h1>
 
 <%= form_for @user, url: url_for(controller: 'sessions', action: 'create') do |f| %>
-    <div class="form_group">
-        Username: <%= f.text_field :username, class: "form-control" %>
-        Password: <%= f.password_field :password, class: "form-control %>
-        <div class="actions"><%= f.submit "Sign In", {class: "btn btn-primary"} %></div>
-    </div>
-<% end %>  
+	<div class="form-group">
+		<%= f.label :username, "Enter your username" %><br><%= f.text_field :username %>
+	</div><br>
+	<div class="form-group">
+		<%= f.label :password, "Enter your password" %><br><%= f.password_field :password, class: "form-control" %>
+	</div><br>
+	<div class="actions">
+		<%= f.submit "Sign In", {class: "btn btn-primary"} %>
+	</div>
+<% end %>
